@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SS Packers and Movers</title>
     <link rel="stylesheet" href="/style.css" />
-    
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
@@ -333,12 +333,10 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        console.log("Form submitted!"); 
+        console.log("Form submitted!");
 
-    
-        const whatsappNumber = "7395979050";
+        const whatsappNumber = "9710254930";
 
-    
         const fullName = document.getElementById("fullName").value;
         const phoneNumber = document.getElementById("phoneNumber").value;
         const emailAddress = document.getElementById("emailAddress").value;
@@ -352,7 +350,6 @@
           "additionalRequirements"
         ).value;
 
-  
         const message = `🚚 NEW MOVING QUOTE REQUEST 🚚
 
 👤 Customer Details:
@@ -373,12 +370,11 @@ ${additionalRequirements || "None specified"}
 ---
 Please respond with a detailed quote within 30 minutes.`;
 
-    
         const encodedMessage = encodeURIComponent(message);
         const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
 
-        console.log("Opening WhatsApp..."); 
- 
+        console.log("Opening WhatsApp...");
+
         window.open(whatsappURL, "_blank");
 
         alert("Redirecting to WhatsApp to send your quote request!");
