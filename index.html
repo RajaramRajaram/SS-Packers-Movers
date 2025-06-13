@@ -333,12 +333,12 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        console.log("Form submitted!"); // Debug line
+        console.log("Form submitted!"); 
 
-        // WhatsApp number
+    
         const whatsappNumber = "7395979050";
 
-        // Get form data
+    
         const fullName = document.getElementById("fullName").value;
         const phoneNumber = document.getElementById("phoneNumber").value;
         const emailAddress = document.getElementById("emailAddress").value;
@@ -352,7 +352,7 @@
           "additionalRequirements"
         ).value;
 
-        // Create WhatsApp message
+  
         const message = `🚚 NEW MOVING QUOTE REQUEST 🚚
 
 👤 Customer Details:
@@ -373,16 +373,14 @@ ${additionalRequirements || "None specified"}
 ---
 Please respond with a detailed quote within 30 minutes.`;
 
-        // Encode for WhatsApp
+    
         const encodedMessage = encodeURIComponent(message);
         const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
 
-        console.log("Opening WhatsApp..."); // Debug line
-
-        // Open WhatsApp
+        console.log("Opening WhatsApp..."); 
+ 
         window.open(whatsappURL, "_blank");
 
-        // Show confirmation
         alert("Redirecting to WhatsApp to send your quote request!");
       });
     });
